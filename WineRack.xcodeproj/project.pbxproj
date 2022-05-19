@@ -17,6 +17,7 @@
 		3A2245732835AB3D00798AE4 /* WineRackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2245722835AB3D00798AE4 /* WineRackTests.swift */; };
 		3A22457D2835AB3D00798AE4 /* WineRackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22457C2835AB3D00798AE4 /* WineRackUITests.swift */; };
 		3A22457F2835AB3D00798AE4 /* WineRackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22457E2835AB3D00798AE4 /* WineRackUITestsLaunchTests.swift */; };
+		3A22458C283686D600798AE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A22458B283686D600798AE4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3A2245782835AB3D00798AE4 /* WineRackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WineRackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A22457C2835AB3D00798AE4 /* WineRackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineRackUITests.swift; sourceTree = "<group>"; };
 		3A22457E2835AB3D00798AE4 /* WineRackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineRackUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3A22458B283686D600798AE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3A2245662835AB3D00798AE4 /* LaunchScreen.storyboard */,
 				3A2245692835AB3D00798AE4 /* Info.plist */,
 				3A2245612835AB3C00798AE4 /* WineRack.xcdatamodeld */,
+				3A22458B283686D600798AE4 /* GoogleService-Info.plist */,
 			);
 			path = WineRack;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2245682835AB3D00798AE4 /* LaunchScreen.storyboard in Resources */,
+				3A22458C283686D600798AE4 /* GoogleService-Info.plist in Resources */,
 				3A2245652835AB3D00798AE4 /* Assets.xcassets in Resources */,
 				3A2245602835AB3C00798AE4 /* Main.storyboard in Resources */,
 			);
