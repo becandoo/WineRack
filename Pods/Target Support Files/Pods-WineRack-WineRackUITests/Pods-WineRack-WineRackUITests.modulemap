@@ -1,0 +1,6 @@
+framework module Pods_WineRack_WineRackUITests {
+  umbrella header "Pods-WineRack-WineRackUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
