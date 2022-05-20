@@ -18,6 +18,14 @@
 		3A22457D2835AB3D00798AE4 /* WineRackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22457C2835AB3D00798AE4 /* WineRackUITests.swift */; };
 		3A22457F2835AB3D00798AE4 /* WineRackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22457E2835AB3D00798AE4 /* WineRackUITestsLaunchTests.swift */; };
 		3A22458C283686D600798AE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A22458B283686D600798AE4 /* GoogleService-Info.plist */; };
+		3A22458E2836BCDB00798AE4 /* CellarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22458D2836BCDB00798AE4 /* CellarViewController.swift */; };
+		3A2245902836BD0D00798AE4 /* TastingLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22458F2836BD0D00798AE4 /* TastingLogViewController.swift */; };
+		3A2245922836BD2400798AE4 /* WineriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2245912836BD2400798AE4 /* WineriesViewController.swift */; };
+		3A2245942836BD3400798AE4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2245932836BD3400798AE4 /* AccountViewController.swift */; };
+		3A2245962836F77B00798AE4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2245952836F77B00798AE4 /* SignUpViewController.swift */; };
+		3A2245992837DB5300798AE4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2245982837DB5300798AE4 /* Utilities.swift */; };
+		3A22459B2837E5DB00798AE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22459A2837E5DB00798AE4 /* Constants.swift */; };
+		3A22459D2837E88100798AE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22459C2837E88100798AE4 /* HomeViewController.swift */; };
 		CDD2498484270F7340B8A5CB /* Pods_WineRack_WineRackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C36224296EEFBF8584FA24 /* Pods_WineRack_WineRackUITests.framework */; };
 		D67C83DC2A0195E9FC1C50C0 /* Pods_WineRack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD568870B4BFE6CBC85F97A /* Pods_WineRack.framework */; };
 		FCF6889704512F55ED352C28 /* Pods_WineRackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2928007CEB93221D6E968A /* Pods_WineRackTests.framework */; };
@@ -59,6 +67,14 @@
 		3A22457C2835AB3D00798AE4 /* WineRackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineRackUITests.swift; sourceTree = "<group>"; };
 		3A22457E2835AB3D00798AE4 /* WineRackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineRackUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3A22458B283686D600798AE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A22458D2836BCDB00798AE4 /* CellarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarViewController.swift; sourceTree = "<group>"; };
+		3A22458F2836BD0D00798AE4 /* TastingLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingLogViewController.swift; sourceTree = "<group>"; };
+		3A2245912836BD2400798AE4 /* WineriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineriesViewController.swift; sourceTree = "<group>"; };
+		3A2245932836BD3400798AE4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		3A2245952836F77B00798AE4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3A2245982837DB5300798AE4 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3A22459A2837E5DB00798AE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3A22459C2837E88100798AE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49C36224296EEFBF8584FA24 /* Pods_WineRack_WineRackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineRack_WineRackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2928007CEB93221D6E968A /* Pods_WineRackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineRackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54AA70D46A0ED22313910EF /* Pods-WineRack-WineRackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineRack-WineRackUITests.release.xcconfig"; path = "Target Support Files/Pods-WineRack-WineRackUITests/Pods-WineRack-WineRackUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,9 +136,11 @@
 		3A2245572835AB3C00798AE4 /* WineRack */ = {
 			isa = PBXGroup;
 			children = (
+				3A22459E2837E88700798AE4 /* ViewControllers */,
 				3A2245582835AB3C00798AE4 /* AppDelegate.swift */,
 				3A22455A2835AB3C00798AE4 /* SceneDelegate.swift */,
 				3A22455C2835AB3C00798AE4 /* ViewController.swift */,
+				3A2245972837DB2800798AE4 /* Utilities */,
 				3A22455E2835AB3C00798AE4 /* Main.storyboard */,
 				3A2245642835AB3D00798AE4 /* Assets.xcassets */,
 				3A2245662835AB3D00798AE4 /* LaunchScreen.storyboard */,
@@ -150,6 +168,28 @@
 			path = WineRackUITests;
 			sourceTree = "<group>";
 		};
+		3A2245972837DB2800798AE4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A22459A2837E5DB00798AE4 /* Constants.swift */,
+				3A2245982837DB5300798AE4 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3A22459E2837E88700798AE4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A22458D2836BCDB00798AE4 /* CellarViewController.swift */,
+				3A22458F2836BD0D00798AE4 /* TastingLogViewController.swift */,
+				3A2245912836BD2400798AE4 /* WineriesViewController.swift */,
+				3A2245932836BD3400798AE4 /* AccountViewController.swift */,
+				3A2245952836F77B00798AE4 /* SignUpViewController.swift */,
+				3A22459C2837E88100798AE4 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		93906CCE6649E86901CBDA4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +210,6 @@
 				3411E9242C48ECFE5C1CF0A1 /* Pods-WineRackTests.debug.xcconfig */,
 				3473DFDB159DD6E938608BF5 /* Pods-WineRackTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -415,9 +454,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A22455D2835AB3C00798AE4 /* ViewController.swift in Sources */,
+				3A22459B2837E5DB00798AE4 /* Constants.swift in Sources */,
+				3A22458E2836BCDB00798AE4 /* CellarViewController.swift in Sources */,
+				3A2245942836BD3400798AE4 /* AccountViewController.swift in Sources */,
+				3A2245902836BD0D00798AE4 /* TastingLogViewController.swift in Sources */,
 				3A2245632835AB3C00798AE4 /* WineRack.xcdatamodeld in Sources */,
+				3A2245922836BD2400798AE4 /* WineriesViewController.swift in Sources */,
+				3A2245962836F77B00798AE4 /* SignUpViewController.swift in Sources */,
 				3A2245592835AB3C00798AE4 /* AppDelegate.swift in Sources */,
+				3A2245992837DB5300798AE4 /* Utilities.swift in Sources */,
 				3A22455B2835AB3C00798AE4 /* SceneDelegate.swift in Sources */,
+				3A22459D2837E88100798AE4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
