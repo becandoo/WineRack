@@ -30,7 +30,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="q9y-mD-kTI">
-                                <rect key="frame" x="40" y="712" width="334" height="110"/>
+                                <rect key="frame" x="40" y="642" width="334" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fME-tR-iyz">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -69,6 +69,13 @@
                                             <segue destination="COz-8P-Lic" kind="presentation" identifier="toSignUpViewController" modalPresentationStyle="fullScreen" id="BmR-ga-9BW"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1u-M9-rym" customClass="GIDSignInButton">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="R1h-uL-Umf"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wine Rack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-Yi-wDW">
@@ -99,6 +106,7 @@
                         <outlet property="emailText" destination="FqM-Ix-gUe" id="DUA-0O-2wK"/>
                         <outlet property="errorMessageText" destination="7ph-St-zfL" id="HGL-HJ-ebx"/>
                         <outlet property="passwordText" destination="eMa-KD-69u" id="nFr-D9-KLc"/>
+                        <outlet property="signInButton" destination="v1u-M9-rym" id="X9A-Yt-6xC"/>
                         <segue destination="3nC-Z3-GY3" kind="presentation" identifier="toMainVC" modalPresentationStyle="fullScreen" id="qvq-ef-j6R"/>
                     </connections>
                 </viewController>

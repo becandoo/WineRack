@@ -7,18 +7,19 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseCore
+import GoogleSignIn
 
 class ViewController: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var errorMessageText: UILabel!
+    @IBOutlet var signInButton: GIDSignInButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-   
-        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         //setup elements\styles
         setUpElements()
     }
@@ -28,6 +29,11 @@ class ViewController: UIViewController {
         //hide error message
         errorMessageText.alpha = 0
         passwordText.isSecureTextEntry = true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
     
     func validateFields() -> String? {
@@ -83,6 +89,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     
     //move function to utilities file?
     func showError(_ message:String) {

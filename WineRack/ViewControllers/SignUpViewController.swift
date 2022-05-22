@@ -32,6 +32,11 @@ class SignUpViewController: UIViewController {
         signupReenterPasswordText.isSecureTextEntry = true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     //check the fields and validate that the data is correct. If everything is correct, this method returns nil.
     //otherwise an error message will be shown.
     func validateFields() -> String? {

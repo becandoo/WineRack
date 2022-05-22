@@ -8,9 +8,11 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseCore
+import GoogleSignIn
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
 
@@ -19,9 +21,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        //note - build fails on IOS Simulator due to pod incompatability with ARM.
+        GIDSignIn.sharedInstance()?.clientID = "615751227817-tvagkck4b00sg7slfb24g0vpip2ng6mq.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance()?.delegate = self
+        
         return true
     }
-
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("User Email: \(user.profile.email ?? "No Email")")
+    }
+    @available(iOS 9.0, *)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    let handled = GIDSignIn.sharedInstance().handle(url)
+    return handled
+    // return GIDSignIn.sharedInstance().handle(url,
+    // sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+    // annotation: [:])
+    }
+   
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
