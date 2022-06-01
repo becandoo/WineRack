@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +42,7 @@
                                         <state key="normal" title="Sign In"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign In">
                                             <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </buttonConfiguration>
@@ -78,13 +79,6 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wine Rack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-Yi-wDW">
-                                <rect key="frame" x="125" y="126" width="164" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Message Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ph-St-zfL">
                                 <rect key="frame" x="74" y="345" width="258" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,9 +86,16 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wine Rack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-Yi-wDW">
+                                <rect key="frame" x="76" y="116" width="276" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="56"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9y-mD-kTI" secondAttribute="trailing" constant="40" id="A4s-hv-gBj"/>
                             <constraint firstItem="q9y-mD-kTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Tjr-bP-r1w"/>
@@ -306,8 +307,110 @@
                     <view key="view" contentMode="scaleToFill" id="dY7-k4-S0E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-WL-jtS">
+                                <rect key="frame" x="40" y="84" width="334" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9w7-kF-Yda">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wrJ-7p-cKQ"/>
+                                        </constraints>
+                                        <menu key="menu" id="lQo-WC-ihF">
+                                            <children>
+                                                <command title="Red" id="ixG-8f-2Lf"/>
+                                                <command title="White" id="wdz-LK-bHC"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Current Bottles">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9w7-kF-Yda" firstAttribute="leading" secondItem="kSa-WL-jtS" secondAttribute="leading" constant="40" id="7Nm-S1-y1k"/>
+                                    <constraint firstAttribute="trailing" secondItem="9w7-kF-Yda" secondAttribute="trailing" constant="40" id="pee-dK-9eh"/>
+                                    <constraint firstItem="9w7-kF-Yda" firstAttribute="top" secondItem="kSa-WL-jtS" secondAttribute="top" constant="40" id="wUc-RD-mIC"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qXk-ai-5Ho">
+                                <rect key="frame" x="40" y="164" width="334" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWv-ki-2Ih">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jPc-NQ-1Gr"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <menu key="menu" id="S3D-Ee-O25">
+                                            <children>
+                                                <command title="Red" id="JS6-PZ-cQA"/>
+                                                <command title="White" id="NXb-6K-XZ0"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Past Bottles">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbt-BO-DIY">
+                                <rect key="frame" x="40" y="244" width="334" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bO-uT-Mtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <menu key="menu" id="pGl-Ul-hFg">
+                                            <children>
+                                                <command title="Item 1" id="20P-pr-dCO"/>
+                                                <command title="Item 2" id="NlG-Ik-GeM"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Add Bottle">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtR-w1-mSp">
+                                        <rect key="frame" x="167" y="0.0" width="167" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <menu key="menu" id="5DK-Tr-Ugh">
+                                            <children>
+                                                <command title="Item 1" id="44w-R9-Z7D"/>
+                                                <command title="Item 2" id="qmd-GU-nDq"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LtR-w1-mSp" firstAttribute="width" secondItem="8bO-uT-Mtn" secondAttribute="width" id="10H-fn-TrG"/>
+                                    <constraint firstItem="LtR-w1-mSp" firstAttribute="centerY" secondItem="kbt-BO-DIY" secondAttribute="centerY" id="A45-JH-Frx"/>
+                                    <constraint firstItem="8bO-uT-Mtn" firstAttribute="leading" secondItem="kbt-BO-DIY" secondAttribute="leading" constant="20" id="CiU-j7-hcL"/>
+                                    <constraint firstAttribute="trailing" secondItem="LtR-w1-mSp" secondAttribute="trailing" constant="20" id="I2R-xK-7kn"/>
+                                    <constraint firstItem="LtR-w1-mSp" firstAttribute="leading" secondItem="8bO-uT-Mtn" secondAttribute="trailing" constant="20" id="MiX-qP-f87"/>
+                                    <constraint firstItem="LtR-w1-mSp" firstAttribute="leading" secondItem="8bO-uT-Mtn" secondAttribute="trailing" constant="20" id="U8Q-KH-cSc"/>
+                                    <constraint firstItem="8bO-uT-Mtn" firstAttribute="centerY" secondItem="kbt-BO-DIY" secondAttribute="centerY" id="YbC-Iu-Y0N"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mUs-jw-4Do"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mUs-jw-4Do" firstAttribute="trailing" secondItem="kbt-BO-DIY" secondAttribute="trailing" constant="40" id="04B-b9-ZAR"/>
+                            <constraint firstItem="mUs-jw-4Do" firstAttribute="trailing" secondItem="qXk-ai-5Ho" secondAttribute="trailing" constant="40" id="0Zs-Sv-UgV"/>
+                            <constraint firstItem="kbt-BO-DIY" firstAttribute="top" secondItem="qXk-ai-5Ho" secondAttribute="bottom" constant="40" id="17B-s8-iDZ"/>
+                            <constraint firstItem="qXk-ai-5Ho" firstAttribute="leading" secondItem="mUs-jw-4Do" secondAttribute="leading" constant="40" id="5b3-4K-15a"/>
+                            <constraint firstItem="qXk-ai-5Ho" firstAttribute="top" secondItem="kSa-WL-jtS" secondAttribute="bottom" constant="40" id="NpK-Qs-9cb"/>
+                            <constraint firstItem="kSa-WL-jtS" firstAttribute="leading" secondItem="mUs-jw-4Do" secondAttribute="leading" constant="40" id="SvX-Dw-w33"/>
+                            <constraint firstItem="kSa-WL-jtS" firstAttribute="top" secondItem="mUs-jw-4Do" secondAttribute="top" constant="40" id="ZUy-Cb-NTC"/>
+                            <constraint firstItem="kbt-BO-DIY" firstAttribute="leading" secondItem="mUs-jw-4Do" secondAttribute="leading" constant="40" id="dPN-cr-tfo"/>
+                            <constraint firstItem="mUs-jw-4Do" firstAttribute="trailing" secondItem="kSa-WL-jtS" secondAttribute="trailing" constant="40" id="fyX-Zl-lJP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cellar" image="cellar2-32px" selectedImage="cellar2-32px" id="RlM-jI-yu9"/>
                 </viewController>
@@ -350,14 +453,26 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
